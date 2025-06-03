@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopyKart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bgblack">
+    <nav class="navbar " id="bgblack">
+        <div class="container ">
+            <h1 class="heading">
+                <span class="head1">SHOPPY</span>
+                <span class="head2" id="bl2">KART</span>
+            </h1>
+            <ul id="bl3">
+                <li>home</li>
+                <li>about</li>
+                <li>product</li>
+                <li>pages</li>
+                <li>contact</li>
+            </ul>
+            <!-- search button -->
+            <i class="fa-solid fa-magnifying-glass" id="search1"></i>
+            <i class="fa-solid fa-xmark" id="cancel"></i>
+             <!-- search button -->
+            <div class="btnlog">
+                <div class="btnlogin">
+                    <h4>login</h4>
+                </div>
+                <div class="btncart">
+                    <h4>cart</h4>
+                </div>
+            </div>
+            <i class="fa-solid fa-moon" id="black"></i>
+            <i class="fa-solid fa-sun sun hide" id="light"></i>
+        </div>
+        <input type="text" name="" class="inpp" id="inp1" placeholder="Search"> 
+    </nav>
+ 
+
+    <div class="container2">
+        <img src="imgShopy/photo-1483985988355-763728e1935b.avif" alt="" class="image1 php-img">
+        <div class="overlay">
+            <div class="image2">
+                <img src="imgShopy/istockphoto-1916760062-612x612.webp" alt="" class="php-img">
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("black").addEventListener("click", function(){
+        document.getElementById("bgblack").classList.add("bg-blackk");
+        document.getElementById("inp1").classList.add("bg-blackk");
+        document.getElementById("bl2").classList.add("bl-22");
+        document.getElementById("bl3").classList.add("bl-22");
+        
+        document.getElementById("black").classList.add("hide");
+        document.getElementById("light").classList.remove("hide");
+
+
+        document.getElementById("bgblack").classList.remove("bg-blackk2");  
+
+        
+      
+
+    });
+    document.getElementById("light").addEventListener("click", function(){
+        document.getElementById("bgblack").classList.add("bg-blackk2");
+        document.getElementById("inp1").classList.add("bg-blackk2");
+        document.getElementById("bl2").classList.add("bl-23");
+        document.getElementById("bl3").classList.add("bl-23");
+
+       
+
+        document.getElementById("light").classList.add("hide");
+        document.getElementById("black").classList.remove("hide");
+        
+        
+    });
+//  input part
+    document.getElementById("search1").addEventListener("click", function(){
+        document.getElementById("inp1").classList.add("inputchange");
+        document.getElementById("bl3").classList.add("listchange");
+        document.getElementById("search1").classList.add("hide");
+
+        
+    });
+
+    document.getElementById("cancel").addEventListener("click", function(){
+        document.getElementById("search1").classList.remove("hide");
+        document.getElementById("inp1").classList.add("hide");
+    });
+
+    // document.getElementById("search1").addEventListener("click", function(){
+    //     document.getElementById("search1").classList.add("listchange");
+    // });
+    
+
+</script>
+</html>
